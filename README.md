@@ -1,9 +1,8 @@
-# themes
-Fallout Theme for the Windows Terminal
+# Fallout Theme for the Windows Terminal
 
 ![Fallout Terminal Sample](https://github.com/Lukasedv/themes/blob/master/animation.gif)
 
-#Installation
+## Installation
 You can download the Windows Terminal here: https://github.com/microsoft/terminal
 
 First download the terminal background image, you can use any you find. Here is the one I am using: 
