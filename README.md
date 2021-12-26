@@ -9,7 +9,7 @@ First download the terminal background image, you can use any you find. Here is 
 
 ![Fallout Terminal Background](https://github.com/Lukasedv/themes/blob/master/background.png)
 
-Navigate to C:\Users\{USERNAME}\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState and add the background image. For the below code to work you have to name it background.png
+Navigate to C:\Users\YOUR_USERNAME\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState and add the background image. For the below code to work you have to name it background.png
 
 Now you can open the terminal and click settings under the menu arrow next to the open tab. The settings.json will open. Under the right GUID (E.g. PowerShell, Ubuntu, CMD), add the following lines:                
 
