@@ -1,17 +1,19 @@
 # Fallout Theme for the Windows Terminal
 
-![Fallout Terminal Sample](https://github.com/Lukasedv/themes/blob/master/animation.gif)
+![Fallout Terminal Sample](./animation.gif)
+
+Updated for 2026.
 
 ## Installation
-You can download the Windows Terminal here: https://github.com/microsoft/terminal
+You can download Windows Terminal here: https://github.com/microsoft/terminal
 
 First download the terminal background image, you can use any you find. Here is the one I am using: 
 
-![Fallout Terminal Background](https://github.com/Lukasedv/themes/blob/master/background.png)
+![Fallout Terminal Background](./background.png)
 
-Navigate to %localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState and add the background image. For the below code to work you have to name it background.png
-
-Now you can open the terminal and click settings under the menu arrow next to the open tab. The settings.json will open. Under the right GUID (E.g. PowerShell, Ubuntu, CMD), add the following lines:                
+1. Save `background.png` to `%localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`.
+2. Open Windows Terminal settings (`Ctrl` + `,`) and open the JSON file.
+3. Under your profile (`PowerShell`, `Ubuntu`, `Command Prompt`, etc.), add:
 
     {
         "guid": "{xxxxxxx-xxxx-xxxx-xxxx-xxxxxxx}", //Replace this with yours
@@ -23,10 +25,10 @@ Now you can open the terminal and click settings under the menu arrow next to th
         "colorScheme": "Fallout",
         "backgroundImage" : "ms-appdata:///roaming/background.png", //or whatever your background file is named
         "backgroundImageOpacity" : 0.5,
-        "backgroundImageStrechMode" : "fill"
+        "backgroundImageStretchMode" : "fill"
     }
 
-and under "schemes" below add the following:
+4. Under `"schemes"`, add:
 
     {
         "name" : "Fallout",
