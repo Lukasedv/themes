@@ -1,56 +1,27 @@
-# Themes for the Windows Terminal
+# Fallout Theme for the Windows Terminal
 
 ![Fallout Terminal Sample](./animation.gif)
 
 Updated for 2026.
 
-## Prerequisites
+## Installation
 
 1. **Install Windows Terminal** from the [Microsoft Store](https://aka.ms/terminal) or from [GitHub](https://github.com/microsoft/terminal).
-2. Open Windows Terminal.
+2. Open Windows Terminal and press `Ctrl` + `,` to open **Settings**.
+3. In the bottom-left corner, click **Open JSON file** to open `settings.json` in your default editor.
 
-## How to Install a Theme
+> **Tip:** You can also open `settings.json` directly at:
+> ```
+> %localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+> ```
 
-There are two ways to apply a theme:
-
-### Option A: Using the Settings UI
-
-1. Open Windows Terminal and press `Ctrl` + `,` to open **Settings**.
-2. In the bottom-left corner, click **Open JSON file** to open `settings.json` in your default editor.
-3. Follow the theme-specific instructions below to add the profile settings and color scheme to the JSON file.
-4. Save the file — Windows Terminal will automatically reload with your new theme.
-
-### Option B: Direct JSON Editing
-
-1. Open the `settings.json` file directly at:
-   ```
-   %localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
-   ```
-2. Follow the theme-specific instructions below to add the profile settings and color scheme.
-3. Save the file.
-
-> **Tip:** If you make a JSON syntax error, Windows Terminal will show a warning and revert to the previous valid settings.
-
----
-
-## Theme 1: Fallout
-
-A Fallout-inspired green terminal with a CRT retro effect and custom background.
-
-### Background Image Setup
-
-Download the terminal background image (or use any you find). Here is the one included in this repo:
+First download the terminal background image, you can use any you find. Here is the one I am using:
 
 ![Fallout Terminal Background](./background.png)
 
-1. Save `background.png` to:
-   ```
-   %localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState
-   ```
+4. Save `background.png` to `%localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`.
 
-### Profile Settings
-
-Under `"profiles"` → `"list"`, add or update your profile (e.g. `PowerShell`, `Ubuntu`, `Command Prompt`):
+5. Under your profile (`PowerShell`, `Ubuntu`, `Command Prompt`, etc.), add:
 
 ```json
 {
@@ -69,9 +40,7 @@ Under `"profiles"` → `"list"`, add or update your profile (e.g. `PowerShell`, 
 
 > Replace `guid`, `name`, and `source` with values matching your own profile.
 
-### Color Scheme
-
-Under `"schemes"`, add:
+6. Under `"schemes"`, add:
 
 ```json
 {
@@ -99,71 +68,10 @@ Under `"schemes"`, add:
 }
 ```
 
----
-
-## Theme 2: Retro Command Prompt
-
-A classic green-on-black CRT terminal inspired by the [Microsoft Terminal Retro Command Prompt](https://learn.microsoft.com/en-us/windows/terminal/custom-terminal-gallery/retro-command-prompt). Uses the experimental retro terminal effect for scan lines and CRT glow.
-
-### Profile Settings
-
-Under `"profiles"` → `"list"`, add or update your profile:
-
-```json
-{
-    "name": "Command Prompt",
-    "commandline": "cmd.exe",
-    "cursorColor": "#FFFFFF",
-    "cursorShape": "filledBox",
-    "colorScheme": "Retro",
-    "fontSize": 16,
-    "padding": "5, 5, 5, 5",
-    "tabTitle": "Command Prompt",
-    "fontFace": "PxPlus IBM VGA8",
-    "experimental.retroTerminalEffect": true
-}
-```
-
-> **Font note:** The `PxPlus IBM VGA8` font gives the most authentic retro look. You can download it from [int10h.org](https://int10h.org/oldschool-pc-fonts/). If you don't want to install a custom font, replace `"fontFace"` with `"Consolas"` or `"Cascadia Mono"`.
-
-### Color Scheme
-
-Under `"schemes"`, add:
-
-```json
-{
-    "name": "Retro",
-    "background": "#000000",
-    "foreground": "#00ff00",
-    "cursorColor": "#FFFFFF",
-    "black": "#00ff00",
-    "blue": "#00ff00",
-    "brightBlack": "#00ff00",
-    "brightBlue": "#00ff00",
-    "brightCyan": "#00ff00",
-    "brightGreen": "#00ff00",
-    "brightPurple": "#00ff00",
-    "brightRed": "#00ff00",
-    "brightWhite": "#00ff00",
-    "brightYellow": "#00ff00",
-    "cyan": "#00ff00",
-    "green": "#00ff00",
-    "purple": "#00ff00",
-    "red": "#00ff00",
-    "white": "#00ff00",
-    "yellow": "#00ff00"
-}
-```
-
----
+7. Save the file — Windows Terminal will automatically reload with the new theme.
 
 ## About `experimental.retroTerminalEffect`
 
-Setting `"experimental.retroTerminalEffect": true` in a profile enables a CRT-style visual effect that adds:
-- **Scan lines** across the terminal
-- **Screen glow / bloom** around text
-- A subtle **screen curvature** distortion
-
-This works with any color scheme and can be toggled off by setting the value to `false`.
+The `"experimental.retroTerminalEffect": true` setting in the profile above enables a CRT-style visual effect (inspired by the [Microsoft Retro Command Prompt](https://learn.microsoft.com/en-us/windows/terminal/custom-terminal-gallery/retro-command-prompt)) that adds scan lines, screen glow, and subtle curvature distortion. You can disable it by setting the value to `false`.
 
 You should be good to go!
