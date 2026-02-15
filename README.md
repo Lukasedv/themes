@@ -15,13 +15,13 @@ Updated for 2026.
 > %localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 > ```
 
-First download the terminal background image, you can use any you find. Here is the one I am using:
+4. Download the terminal background image (you can use any you find). Here is the one included in this repo:
 
-![Fallout Terminal Background](./background.png)
+   ![Fallout Terminal Background](./background.png)
 
-4. Save `background.png` to `%localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`.
+5. Save `background.png` to `%localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`.
 
-5. Under your profile (`PowerShell`, `Ubuntu`, `Command Prompt`, etc.), add:
+6. Under your profile (`PowerShell`, `Ubuntu`, `Command Prompt`, etc.), add:
 
 ```json
 {
@@ -40,7 +40,7 @@ First download the terminal background image, you can use any you find. Here is 
 
 > Replace `guid`, `name`, and `source` with values matching your own profile.
 
-6. Under `"schemes"`, add:
+7. Under `"schemes"`, add:
 
 ```json
 {
@@ -68,7 +68,7 @@ First download the terminal background image, you can use any you find. Here is 
 }
 ```
 
-7. Save the file — Windows Terminal will automatically reload with the new theme.
+8. Save the file — Windows Terminal will automatically reload with the new theme.
 
 ## About `experimental.retroTerminalEffect`
 
