@@ -29,7 +29,7 @@ Updated for 2026.
     "hidden": false,
     "name": "PowerShell",
     "source": "Windows.Terminal.PowershellCore",
-    "fontFace": "Lucida Sans Typewriter Regular",
+    "fontFace": "Consolas",
     "experimental.retroTerminalEffect": true,
     "colorScheme": "Fallout",
     "backgroundImage": "ms-appdata:///roaming/background.png",
@@ -69,6 +69,21 @@ Updated for 2026.
 ```
 
 8. Save the file — Windows Terminal will automatically reload with the new theme.
+
+## Suggested Fonts
+
+The `fontFace` value in the profile controls which font is used. The example above uses **Consolas**, which ships with all modern versions of Windows. Below are some recommended alternatives that pair well with the Fallout terminal look:
+
+| Font | Availability | Notes |
+|------|-------------|-------|
+| **Consolas** | Pre-installed on Windows Vista and later | Clean monospace font; works out of the box. |
+| **Lucida Console** | Pre-installed on Windows | Classic monospace font with a compact style. |
+| **Courier New** | Pre-installed on Windows, macOS, and Linux | Ubiquitous monospace font with a traditional typewriter feel. |
+| **Cascadia Mono** | Bundled with Windows Terminal | Modern monospace font designed for terminals. |
+| **Fixedsys Excelsior** | [Free download](https://github.com/kika/fixedsys) | Retro DOS-era bitmap-style font; great for an authentic CRT look. |
+| **Monofonto** | [Free download](https://www.dafont.com/monofonto.font) | Closely associated with Fallout fan recreations. |
+
+> **Tip:** To use a downloaded font, install it system-wide first, then set `"fontFace"` to its exact name.
 
 ## About `experimental.retroTerminalEffect`
 
